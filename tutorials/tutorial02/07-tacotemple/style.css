@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    background-color: #fff; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.card img {
+    max-width: 100%; 
+    height: auto; 
+}
