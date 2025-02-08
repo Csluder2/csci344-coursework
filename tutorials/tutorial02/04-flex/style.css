@@ -1,0 +1,50 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* create additional rules below:  */
+
+#home {
+    display: flex; 
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+
+#bio {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: turquoise;
+}
+
+#portfolio {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: greenyellow;
+}
+
+#contact {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background-color: purple;  
+}
