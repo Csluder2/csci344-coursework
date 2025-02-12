@@ -12,7 +12,7 @@ main {
 
 .card {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr auto; 
     background-color: #fff; 
     padding: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -26,5 +26,6 @@ main {
 
 .card img {
     max-width: 100%; 
-    height: auto; 
+    height: auto;
+    margin-left: 20px; 
 }
