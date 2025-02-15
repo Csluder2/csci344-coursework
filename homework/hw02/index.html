@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Photo App</title>
+</head>
+
+<body>
+    <!--Navigation (fixed)-->
+    <header class="top-nav">
+        <h1 class="logo">Photo App</h1>
+        <nav>
+            <span>gibsonjack</span>
+            <button>Sign out</button>
+        </nav>
+    </header>
+
+    <!-- Right Panel (fixed) -->
+    <aside class="suggestions-panel">
+        <header>
+            <img src="https://picsum.photos/50" alt="profile" class="profile-pic">
+            <span>gibsonjack</span>
+        </header>
+        <section>
+            <h2>Suggestions for you</h2>
+            <div class="suggestion">
+                <img src="https://picsum.photos/30" alt="profile" class="profile-pic">
+                <h3>Johnny2340</h3>
+                <h4>Suggested for you</h4>
+                </span>
+                <span class="follow">Follow</span>
+            </div>
+            <!-- Repeat for 4 more suggestions -->
+            <div class="suggestion">
+                <img src="https://picsum.photos/35" alt="profile" class="profile-pic">
+                <h3>Iveth405</h3>
+                <h4>Suggested for you</h4>
+                <span class="follow">Follow</span>
+            </div>
+
+            <div class="suggestion">
+                <img src="https://picsum.photos/20" alt="profile" class="profile-pic">
+                <h3>Mattman23</h3>
+                <h4>Suggested for you</h4>
+                <span class="follow">Follow</span>
+            </div>
+
+            <div class="suggestion">
+                <img src="https://picsum.photos/15" alt="profile" class="profile-pic">
+                <h3>RandomPerson123</h3>
+                <h4>Suggested for you</h4>
+                <span class="follow">Follow</span>
+            </div>
+
+            <div class="suggestion">
+                <img src="https://picsum.photos/60" alt="profile" class="profile-pic">
+                <h3>Randomgal3</h3>
+                <h4>Suggested for you</h4>
+                <span class="follow">Follow</span>
+            </div>
+        </section>
+    </aside>
+
+    <main> 
+        <section class="news-feed">
+            <!-- Stories -->
+            <header class="stories">
+                <div class="story">
+                    <img src="https://picsum.photos/41" alt="story" class="profile-pic">
+                    <span>BennySluder</span>
+                </div>
+                <!-- Repeat for 4 more stories -->
+                <div class="story">
+                    <img src="https://picsum.photos/42" alt="story" class="profile-pic">
+                    <span>Canelo350</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/43" alt="story" class="profile-pic">
+                    <span>Mimi3</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/44" alt="story" class="profile-pic">
+                    <span>Tito-Durant</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/45" alt="story" class="profile-pic">
+                    <span>Leonardo249</span>
+                </div>
+
+            </header>
+
+            <!-- Posts -->
+            <section class="post">
+                <header>
+                    <span>gibsonjack</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </header>
+                <img src="https://picsum.photos/501" alt="post image">
+                <div class="post-icons">
+                    <div class="left-icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="post-likes">
+                    <b>240 likes</b>
+                </div>
+                <div class="post-caption">
+                    <b>gibsonjack</b> This is a caption <button>more</button>
+                </div>
+                <div class="post-comments">
+                    <span><b>AlecGuy23</b> Nice photo! blah blah text text comment comment end</span>
+                    <span><b>Jahfari50</b> Amazing! blah blah blah text text blah</span>
+                </div>
+                <div class="add-comment">
+                    <i class="fas fa-smile"></i>
+                    <input type="text" placeholder="Add a comment...">
+                    <span>Post</span>
+                </div>
+            </section>
+            
+            <section class="post">
+                <header>
+                    <span>Isaac20</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </header>
+                <img src="https://picsum.photos/500" alt="post image">
+                <div class="post-icons">
+                    <div class="left-icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="post-likes">
+                    <b>256 likes</b>
+                </div>
+                <div class="post-caption">
+                    <b>Isaac20</b> This is a caption blah blah this is a cool picture text text text... <button>more</button>
+                </div>
+                <div class="post-comments">
+                    <span><b>CaneloLeo</b> Nice stuff comment comment text text. Comment comment text...</span>
+                    <span><b>TitoBenny</b> Amazing! this is comment text text comment. Comment comment comment...</span>
+                </div>
+                <div class="add-comment">
+                    <i class="fas fa-smile"></i>
+                    <input type="text" placeholder="Add a comment...">
+                    <span>Post</span>
+                </div>
+            </section>
+
+            <section class="post">
+                <header>
+                    <span>BenjaminFrank</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </header>
+                <img src="https://picsum.photos/600" alt="post image">
+                <div class="post-icons">
+                    <div class="left-icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="post-likes">
+                    <b>100 likes</b>
+                </div>
+                <div class="post-caption">
+                    <b>BenjaminFrank</b> This is a caption <button>more</button>
+                </div>
+                <div class="post-comments">
+                    <span><b>user2</b> Nice photo! Text text text blah blah blah</span>
+                    <span><b>Robin&Batman</b> Amazing! text blah blah comment comment</span>
+                </div>
+                <div class="add-comment">
+                    <i class="fas fa-smile"></i>
+                    <input type="text" placeholder="Add a comment...">
+                    <span>Post</span>
+                </div>
+            </section>
+
+            <section class="post">
+                <header>
+                    <span>LebronJames</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </header>
+                <img src="https://picsum.photos/1000" alt="post image">
+                <div class="post-icons">
+                    <div class="left-icons">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="right-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="post-likes">
+                    <b>30 likes</b>
+                </div>
+                <div class="post-caption">
+                    <b>LebronJames</b> This is a caption blah blah text... <button>more</button>
+                </div>
+                <div class="post-comments">
+                    <span><b>SuperDude30</b> Nice photo dude, blah blah!</span>
+                    <span><b>BennyTheBun</b> Nice comments blah blah!</span>
+                </div>
+                <div class="add-comment">
+                    <i class="fas fa-smile"></i>
+                    <input type="text" placeholder="Add a comment...">
+                    <span>Post</span>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
