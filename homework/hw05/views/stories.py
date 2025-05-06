@@ -14,10 +14,10 @@ class StoriesListEndpoint(Resource):
         ids_for_me_and_my_friends = get_authorized_user_ids(self.current_user)
 
         # Query stories from those users
-        stories = Story.query.filter(Story.user_id.in_(ids_for_me_and_my_friends)).all()
+        stories = Story.query.filter(Story.user_id.in_(ids_for_me_and_my_friends))
 
         # Serialize each story to a dictionary
-        data = [story.to_dict() for story in stories]
+        data = [item.to_dict() for item in stories.all()]
 
         # Return the JSON response
         return Response(

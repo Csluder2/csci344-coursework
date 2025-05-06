@@ -18,9 +18,10 @@ class ProfileDetailEndpoint(Resource):
         profile = self.current_user
 
         data = profile.to_dict()
+        
         return Response(
             json.dumps(data),
-            mimetype="application/json",
+            mimetype="application/json",  
             status=200,
         )
 

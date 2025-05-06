@@ -6,7 +6,7 @@ from flask_restful import Resource
 from models import db
 from models.bookmark import Bookmark
 from models.post import Post  # Assumed location; needed for post lookup
-from authentication import get_authorized_user_ids  # Assumed location
+from views import get_authorized_user_ids  # Assumed location
 
 # Handles listing and creating bookmarks
 class BookmarksListEndpoint(Resource):
@@ -108,7 +108,7 @@ class BookmarkDetailEndpoint(Resource):
 
     def delete(self, id):
         # Lookup the bookmark by ID
-        bookmark = Bookmark.query.get(id)
+        bookmark = Bookmark.query.filter_by(id=id, user_id=self.current_user.id).first()
 
         # Return 404 if not found
         if bookmark is None:
@@ -117,19 +117,10 @@ class BookmarkDetailEndpoint(Resource):
                 mimetype="application/json",
                 status=404,
             )
-
-        # Make sure the current user owns the bookmark
-        if bookmark.user_id != self.current_user.id:
-            return Response(
-                json.dumps(
-                    {"message": f"you are not authorized to delete bookmark id={id}"}
-                ),
-                mimetype="application/json",
-                status=404,
-            )
+            
 
         # Delete the bookmark and commit the transaction
-        Bookmark.query.filter_by(id=id).delete()
+        db.session.delete(bookmark)
         db.session.commit()
 
         # Confirm deletion

@@ -5,6 +5,8 @@ from flask_restful import Resource
 
 from models import db
 from models.like_post import LikePost
+from views import get_authorized_user_ids
+from models.post import Post
 
 
 class PostLikesListEndpoint(Resource):
@@ -16,8 +18,8 @@ class PostLikesListEndpoint(Resource):
     def post(self):
         # Handles creating a new like for a post
 
-        request_data = request.get_json()  # Get the JSON payload from the request
-        post_id = request_data.get("post_id")  # Extract the post_id from the request
+        request_data = request.get_json()  
+        post_id = request_data.get("post_id")  
 
         # Validate that post_id is provided
         if post_id is None:
@@ -97,24 +99,15 @@ class PostLikesDetailEndpoint(Resource):
     def delete(self, id):
         # Handles deleting a like by its ID
 
-        like = LikePost.query.get(id)  # Retrieve the LikePost record
+        like = LikePost.query.filter_by(id=id, user_id=self.current_user.id).first()
         if like is None:
             return Response(
-                json.dumps({"message": f"like id={id} not found"}),
-                mimetype="application/json",
-                status=404,
-            )
-
-        # Ensure the like belongs to the current user
-        if like.user_id != self.current_user.id:
-            return Response(
-                json.dumps({"message": f"you are not authorized to delete like id={id}"}),
-                mimetype="application/json",
-                status=404,
-            )
-        
+            json.dumps({"message": f"like id={id} not found or not authorized"}),
+            mimetype="application/json",
+            status=404,
+         )
         # Delete the like from the database
-        LikePost.query.filter_by(id=id).delete()
+        db.session.delete(like)
         db.session.commit()
 
         # Confirm deletion
